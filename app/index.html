@@ -1,0 +1,24 @@
+<html ng-app='gajre'>
+  <head>
+    <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  
+  <body>
+    <div ng-controller='TestController as testCtrl'>
+      <h1>{{testCtrl.name}}</h1>
+      <div ng-repeat = "name1 in testCtrl.names">           
+           <div>{{name1 | uppercase}}</div>
+      </div>
+      <input ng-model="testCtrl.name" ng-model-options="{ getterSetter: true}"></input>
+      <tt>{{testCtrl.getName}}</tt>
+      <button ng-click="testCtrl.clic()">Click Me!</button>
+      <my-directive></my-directive>
+     <!--  <table>
+      	<tbody ng-repeat="doc in testCtrl.findDocuments">
+      	  <tr>{{doc}}</tr>
+      	</tbody>
+      </table> -->
+    </div>
+  </body>
+</html>
